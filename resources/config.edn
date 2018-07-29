@@ -1,0 +1,22 @@
+{
+ :application {              
+
+               :logging {
+                         :level         :error
+                         :log-path      "/tmp/log/stackex-analizer/"
+                         :log-file-name "log.txt"
+                         }
+               
+               :server {
+                        :host "0.0.0.0"
+                        :port 5555
+                        }
+
+               :searcher {
+                          :url "https://api.stackexchange.com/2.2/search"
+                          :query "pagesize=100&order=desc&sort=creation&site=stackoverflow"
+                          }
+               
+               :http-connections 10
+               }
+ }
